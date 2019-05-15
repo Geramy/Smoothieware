@@ -81,7 +81,7 @@ void Max6675::on_idle()
     if(!this->read_flag) return;
 
     this->spi_cs_pin.set(false);
-    wait_us(1); // Must wait for first bit valid
+    //wait_us(1); // Must wait for first bit valid
 
     // Read 16 bits (writing something as well is required by the api)
     uint16_t data = spi->write(0);
